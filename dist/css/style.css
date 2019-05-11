@@ -43,6 +43,27 @@ p {
 .container {
   width: 90vw;
   margin: 0 auto;
+  animation: appear 1.7s ease-out;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+    transform: scale(0.98);
+  }
+  40% {
+    transform: scale(1.02);
+  }
+
+  50% {
+    opacity: 1;
+    filter: blur(4px);
+  }
+  100% {
+    filter: blur(0);
+    transform: scale(1);
+  }
 }
 
 /* BUTTONS */
@@ -220,7 +241,6 @@ p {
   color: #fff;
   padding-top: 12rem;
 }
-/*     url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1935&q=80"); */
 
 .main__search {
   text-align: center;
