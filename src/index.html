@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <title>Skinny Alfredo</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <a href="/">
+          <img src="img/logo.png" alt="Logo" class="logo" />
+        </a>
+        <div class="likes">
+          <div class="likes__field">
+            <svg class="likes__icon">
+              <use href="img/icons.svg#icon-heart"></use>
+            </svg>
+          </div>
+          <div class="likes__panel">
+            <ul class="likes__list"></ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="main">
+        <h1 class="main__search">Find a Recipe</h1>
+        <form class="search">
+          <input
+            type="text"
+            class="search__field"
+            placeholder="Search over 1,000,000 recipes..."
+          />
+          <button class="btn search__btn">
+            <svg class="search__icon">
+              <use href="img/icons.svg#icon-magnifying-glass"></use>
+            </svg>
+            <span>Search</span>
+          </button>
+        </form>
+      </div>
+      <div class="inner">
+        <div class="inner__text">
+          <h5 class="inner__text--header">
+            ...and go cook something yummy! We've made it easy for you.
+          </h5>
+
+          <div class="inner__cards">
+            <div class="card">
+              <img src="img/icons/1.png" alt="shop" />
+              <div class="card__text">
+                <div class="card__text--header">
+                  1. Go shopping
+                </div>
+                <p class="card__text--details">
+                  We have created a shopping list so you can easily adjust the
+                  correct amount of what you need to buy.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/icons/2.png" alt="cook" />
+              <div class="card__text">
+                <div class="card__text--header">
+                  2. then cook
+                </div>
+                <p class="card__text--details">
+                  You will find the a link to get to the full instructions on
+                  how to cook the delicious meal you selected.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="img/icons/3.png" alt="eat" />
+              <div class="card__text">
+                <div class="card__text--header">
+                  3. and finally eat
+                </div>
+                <p class="card__text--details">
+                  Finally, you get to enjoy the delicous food you have cooked.
+                  Enjoy it and if you like it save it to your favorites.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="results__container">
+        <div class="results">
+          <h2 class="heading-2">Results</h2>
+          <ul class="results__list"></ul>
+          <div class="results__pages"></div>
+        </div>
+
+        <div class="recipe"></div>
+
+        <div class="shopping">
+          <h2 class="heading-2">Shopping List</h2>
+          <ul class="shopping__list"></ul>
+        </div>
+      </div>
+
+      <footer>
+        <div class="copyright">
+          &copy ${new Date().getFullYear()}; by Julio Soto. All rights reserved
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
