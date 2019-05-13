@@ -14,9 +14,9 @@ export const toggleLikeMenu = numLikes => {
 
 export const renderLike = like => {
   const markup = `
-        <li>
-            <a class="likes__link" href="#${like.id}">
-                <figure class="likes__fig">
+        <li >
+            <a class="likes__link" href="#${like.id}" >
+                <figure class="likes__fig" >
                     <img src="${like.img}" alt="${like.title}">
                 </figure>
                 <div class="likes__data">

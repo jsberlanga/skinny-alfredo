@@ -26,7 +26,12 @@
             </svg>
           </div>
           <div class="likes__panel">
-            <ul class="likes__list"></ul>
+            <ul
+              class="likes__list"
+              onclick="setTimeout(() => document.querySelector('.results').scrollIntoView(),
+              1000
+            )"
+            ></ul>
           </div>
         </div>
       </nav>
@@ -39,7 +44,10 @@
             class="search__field"
             placeholder="Search over 1,000,000 recipes..."
           />
-          <button class="btn search__btn">
+          <button
+            class="btn search__btn"
+            onclick="setTimeout(() => document.querySelector('.results').scrollIntoView(), 1000)"
+          >
             <svg class="search__icon">
               <use href="img/icons.svg#icon-magnifying-glass"></use>
             </svg>
@@ -101,7 +109,7 @@
           <div class="results__pages"></div>
         </div>
 
-        <div class="recipe"></div>
+        <div id="recipe" class="recipe"></div>
 
         <div class="shopping">
           <h2 class="heading-2">Shopping List</h2>
