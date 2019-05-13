@@ -16,9 +16,10 @@ export const highlightSelected = id => {
   resultsArr.forEach(el => {
     el.classList.remove("results__link--active");
   });
-  document
-    .querySelector(`.results__link[href*="${id}"]`)
-    .classList.add("results__link--active");
+  // // Bug when selecting recipe from likes --to be fixed
+  // document
+  //   .querySelector(`.results__link[href*="${id}"]`)
+  //   .classList.add("results__link--active");
 };
 
 export const limitRecipeTitle = (title, limit = 20) => {

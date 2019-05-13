@@ -7,21 +7,23 @@ export const clearRecipe = () => {
 
 const formatCount = count => {
   if (count) {
-    const [int, dec] = count
+    const roundCount = Math.round(count * 10) / 10;
+
+    const [int, dec] = roundCount
       .toString()
       .split(".")
       .map(el => parseInt(el, 10));
 
     // Case where count is a whole number
-    if (!dec) return count;
+    if (!dec) return roundCount;
 
     // Case where count is 0.5 => 0 1/2 => 1/2
     if (int === 0) {
-      const fraction = new Fraction(count);
+      const fraction = new Fraction(roundCount);
       return `${fraction.numerator}/${fraction.denominator}`;
       // Case where count is 2.5 => 5/2 => 2 1/2
     } else {
-      const fraction = new Fraction(count - int);
+      const fraction = new Fraction(roundCount - int);
       return `${int} ${fraction.numerator}/${fraction.denominator}`;
     }
   }
@@ -107,14 +109,14 @@ export const renderRecipe = (recipe, isLiked) => {
         </div>
 
         <div class="recipe__directions">
-            <h2 class="heading-2">How to cook it</h2>
+            <h3 class="heading-3">How to cook it</h3>
             <p class="recipe__directions-text">
                 This recipe was carefully designed and tested by
                 <span class="recipe__by">${
                   recipe.author
-                }</span>. Please check out directions at their website.
+                }</span>. <br />Please check out directions at their website.
             </p>
-            <a class="btn-small recipe__btn" href="${
+            <a class="btn-small btn-directions recipe__btn" href="${
               recipe.url
             }" target="_blank">
                 <span>Directions</span>
